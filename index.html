@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://web.archive.org/web/20160307155806/http://minima.ca/ -->
+<html lang="en-ca">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Home Page - Minima Communications</title>
+	
+	<link type="text/css" rel="stylesheet" href="./styles/bootstrap.css" />
+	<link type="text/css" rel="stylesheet" href="./styles/bootstrap-theme.min.css" />
+	<link type="text/css" rel="stylesheet" href="./styles/hover.css" />
+	<link type="text/css" rel="stylesheet" href="./styles/style.css" />
+<style type="text/css">
+:root #header + #content > #left > #rlblock_left
+{ display: none !important; }</style>
+<body>
+
+<div class="container body-content">
+		
+
+	<div class="row paddedrow" style="background-image: url('./images/headerbg.jpg'); background-size: cover;">
+			<div class="col-md-12">
+				<h1>We can help you get your message across.</h1>
+				<p>Because your audiences, readers, and customers:</p>
+				<ul class="audiences">
+					<li>Are educated, busy, and professional</li>
+					<li>Value concise, actionable content</li>
+					<li>Notice mistakes</li>
+				</ul>
+
+		</div>
+	</div>
+	<div class="row" style="background-color: #f36523; text-align: center;">
+		<div id="logoimg" style="position:relative; width: 364px;margin: 0 auto;">
+			<img src="./images/logo.png" style="" alt="Minima Communications">
+		</div>
+	</div>
+	<a name="services"></a>
+	<div class="row paddedrow">
+		<div class="col-md-12">
+			<h1>We're experienced with these content types and more.</h1>
+			<div class="skills skillscontent">
+				<div class="col-md-12">
+					<div class="col-md-3"><div class="hvr-fade">Technical Documentation</div></div>
+					<div class="col-md-3"><div class="hvr-fade">Web Content</div></div>
+					<div class="col-md-3"><div class="hvr-fade">Marketing Material</div></div>
+					<div class="col-md-3"><div class="hvr-fade">User Guides</div></div>
+				</div>
+				<div class="col-md-12">
+					<div class="col-md-3"><div class="hvr-fade">Creative Writing</div></div>
+					<div class="col-md-3"><div class="hvr-fade">Speeches and Rhetoric</div></div>
+					<div class="col-md-3"><div class="hvr-fade">Screenplays</div></div>
+					<div class="col-md-3"><div class="hvr-fade">Books</div></div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row paddedrow">
+		<div class="col-md-12">
+			<h1>And we offer the following services.</h1>
+			<div class="skills skillsservices" style="padding: 0 15px;">
+				<div class="col-md-4" style="padding: 0px;">
+					<div class="col-md-12"><div class="hvr-fade escon">Content Creation</div></div>
+					<div class="col-md-12"><div class="hvr-fade escon">Copywriting</div></div>
+					<div class="col-md-12"><div class="hvr-fade escon">Content Management</div></div>
+				</div>
+				<div class="col-md-4" style="padding: 0px;">
+					<div class="col-md-12"><div class="hvr-fade esed">Proofreading</div></div>
+					<div class="col-md-12"><div class="hvr-fade esed">Copyediting</div></div>
+					<div class="col-md-12"><div class="hvr-fade esed">Comprehensive Editing</div></div>
+				</div>
+				<div class="col-md-4" style="padding: 0px;">
+					<div class="col-md-12"><div class="hvr-fade esux">Information Design</div></div>
+					<div class="col-md-12"><div class="hvr-fade esux">User Experience</div></div>
+					<div class="col-md-12"><div class="hvr-fade esux">Accessibility</div></div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row paddedrow" style="background-image: url('./images/teambg.jpg'); color: white;">
+		<div class="col-md-12" style="background-color: rgba(0, 0, 0, 0.5);">
+			<h1>We're an entrepreneurial team.</h1>
+			<p>
+				And we have a diverse skillset.
+				From professional communicators to UX experts to engineers.
+			</p>
+		</div>
+	</div>
+
+	<a name="contact"></a>
+
+	<div class="row paddedrow">
+		<div class="col-md-3">
+			<h1>Contact us.</h1>
+		</div>
+		<div class="col-md-9">
+			<p>Email us at info@minima.ca with a request for proposal.</p>
+			<p>Or just let us know what we can help you with.</p>
+		</div>
+	</div>
+
+
+
+
+	<div id="header">
+		<table style="width: 100%;">
+			<tbody><tr>
+				<td>
+					<div id="headertitle" style="line-height: 30px; font-size: 25px;">
+						Minima
+					</div>
+					<div id="headerslogan" style="display: none;">
+						Clear, concise communications.
+					</div>
+				</td>
+				<td>
+					<div id="headermenu" style="">
+						<a href="#services">[Services]</a>
+						<a href="#contact">[Contact Us]</a>
+					</div>
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
+
+
+
+	<hr>
+	<footer id="myfooter">
+		<p>© <span id="footeryear"></span> - Minima Communications</p>
+		<script>document.getElementById("footeryear").innerHTML = (new Date()).getFullYear();</script>
+	</footer>
+</div>
+
+</body>
+
+<script src="./scripts/jquery.js"></script>
+<script src="./scripts/bootstrap.js"></script>
+<script>
+	function handlemenuresize() {
+		var n = $(window).width();
+		n > 400 ? $("#headermenu").show(100) : $("#headermenu").hide(100)
+	}
+	function handleScroll(){
+		var n = $(window).scrollTop();
+		if(n > 5){
+			$("#headerslogan").hide(100); 
+			$("#headertitle").css("line-height", "30px"); 
+			$("#headertitle").css("font-size", "25px");
+		}
+		else if(n == 0){
+			$("#headerslogan").show(100); 
+			$("#headertitle").css("line-height", "50px"); 
+			$("#headertitle").css("font-size", "40px");
+		}
+	}
+
+	function animationTick() {
+		for (var n, i, t = 0; t < bottlewords.length; t++)
+			if (n = bottlewords[t], n.animate({
+					top: "+=" + n.data("ys"),
+					left: "+=" + n.data("xs"),
+					opacity: n.data("life") / 10
+				}, 200), n.data("ys", n.data("ys") - -2), i = n.data("life"), n.data("life", i - 1), i == 0) {
+				n.remove();
+				bottlewords.splice(t, 1);
+				t--;
+				continue
+			}
+		Math.random() > .2 && createNewBottleWord();
+		setTimeout(animationTick, 200)
+	}
+
+	function createNewBottleWord() {
+		var n = $("<p><\/p>").text("m");
+		n.css("position", "absolute");
+		n.css("top", "50px");
+		n.css("left", "250px");
+		n.css("color", "white");
+		n.css("font-size", "15px");
+		n.data("xs", 1 + (Math.random() * 1.5 - .5) * 10);
+		n.data("ys", -1 - Math.random() * 10);
+		n.data("life", 20);
+		n.css("opacity", "0");
+		$("#logoimg").append(n);
+		bottlewords.push(n)
+	}
+	var bottlewords = [];
+	$(function() {
+		setTimeout(handlemenuresize, 1e3);
+		createNewBottleWord();
+		animationTick();
+	});
+	$(window).resize(handlemenuresize);
+	$(window).scroll(handleScroll)
+	handleScroll();
+</script>
+
+</html>
