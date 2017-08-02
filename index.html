@@ -29,10 +29,7 @@
 
 		</div>
 	</div>
-	<div class="row" style="background-color: #f36523; text-align: center;">
-		<div id="logoimg" style="position:relative; width: 364px;margin: 0 auto;">
-			<img src="./images/logo.png" style="" alt="Minima Communications">
-		</div>
+	<div id="logo-out" class="row" style="height: 400px; background-color: #f36523; text-align: center;">
 	</div>
 	<a name="services"></a>
 	<div class="row paddedrow">
@@ -137,10 +134,15 @@
 
 <script src="./scripts/jquery.js"></script>
 <script src="./scripts/bootstrap.js"></script>
+<script src="./scripts/dothtml.js"></script>
+<script src="./scripts/dotcss.js"></script>
+<script src="./scripts/logoapi.js"></script>
+<script src="./scripts/minimalogo.js"></script>
 <script>
 	function handlemenuresize() {
 		var n = $(window).width();
-		n > 400 ? $("#headermenu").show(100) : $("#headermenu").hide(100)
+		n > 400 ? $("#headermenu").show(100) : $("#headermenu").hide(100);
+		minimalogo.resize();
 	}
 	function handleScroll(){
 		var n = $(window).scrollTop();
@@ -156,45 +158,13 @@
 		}
 	}
 
-	function animationTick() {
-		for (var n, i, t = 0; t < bottlewords.length; t++)
-			if (n = bottlewords[t], n.animate({
-					top: "+=" + n.data("ys"),
-					left: "+=" + n.data("xs"),
-					opacity: n.data("life") / 10
-				}, 200), n.data("ys", n.data("ys") - -2), i = n.data("life"), n.data("life", i - 1), i == 0) {
-				n.remove();
-				bottlewords.splice(t, 1);
-				t--;
-				continue
-			}
-		Math.random() > .2 && createNewBottleWord();
-		setTimeout(animationTick, 200)
-	}
-
-	function createNewBottleWord() {
-		var n = $("<p><\/p>").text("m");
-		n.css("position", "absolute");
-		n.css("top", "50px");
-		n.css("left", "250px");
-		n.css("color", "white");
-		n.css("font-size", "15px");
-		n.data("xs", 1 + (Math.random() * 1.5 - .5) * 10);
-		n.data("ys", -1 - Math.random() * 10);
-		n.data("life", 20);
-		n.css("opacity", "0");
-		$("#logoimg").append(n);
-		bottlewords.push(n)
-	}
-	var bottlewords = [];
-	$(function() {
-		setTimeout(handlemenuresize, 1e3);
-		createNewBottleWord();
-		animationTick();
-	});
+	setTimeout(handlemenuresize, 1e3);
 	$(window).resize(handlemenuresize);
-	$(window).scroll(handleScroll)
+	$(window).scroll(handleScroll);
 	handleScroll();
+
+	var minimalogo = MinimaLogo("#logo-out");
+	minimalogo.play();
 </script>
 
 </html>
